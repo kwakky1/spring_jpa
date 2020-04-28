@@ -86,7 +86,7 @@ footer {
    	<label>NAME </label> <br>
    	<input id="name" type="text"/> <br>
    	<label>ID </label> <br>
-   	<input id="userid" type="text"/><input id="validation-button" type="button" value="중복확인"> <br>
+   	<input id="userid" type="text"/><br>
    	<label>PASSWORD</label><br>
    	<input id="password" type="text"/><br>
    	<label>SSN</label><br>
@@ -112,6 +112,7 @@ $('#home_a')
 	})
 $('#signup-button').click(e=>{
 	e.preventDefault()
+	alert('버튼클릭 확인 완료')
 	$.ajax({
 		url:'/user/join',
 		type:'post',
@@ -124,6 +125,8 @@ $('#signup-button').click(e=>{
 		dataType:'json',
 		contentType:'application/json',
 		success: d=>{
+			console.log('LGGIN RESULT::'+d)
+
 			if(d === 'SUCCESS'){
 				location.href='signin.html'
 			}else {

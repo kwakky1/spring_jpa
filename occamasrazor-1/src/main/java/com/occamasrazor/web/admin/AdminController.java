@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.occamasrazor.web.util.Messenger;
 
 @RestController
-@RequestMapping("/member")
+@RequestMapping("/admin")
 public class AdminController {
 	@Autowired AdminService memberService;
 	

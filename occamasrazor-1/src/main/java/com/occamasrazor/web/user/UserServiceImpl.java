@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserService{
 	}
 	@Override
 	public int count() {
+		System.out.println("맵 갯수 확인 :  " + map.size());
 		return map.size();
 	}
 	@Override

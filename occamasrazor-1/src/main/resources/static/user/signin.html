@@ -116,7 +116,7 @@ $('#signin-button').click(e=>{
 		dataType:'json',
 		contentType:'application/json',
 		success : d=>{
-			if(d.messenger === 'SUCCESS'){
+						if(d.messenger === 'SUCCESS'){
 				sessionStorage.setItem('userid',d.user.userid)
 				location.href = 'mypage.html'
 				} else {

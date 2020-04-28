@@ -106,7 +106,7 @@ $('#join_a')
 	.css('cursor','pointer')
 	.click(e=>{
 	e.preventDefault()
-	location.href="member/join.html"
+	location.href="admin/join.html"
 })
 $('#login_a')
 	.css('cursor','pointer')
@@ -124,7 +124,7 @@ $('#signin_a')
 	.css('cursor','pointer')
 	.click(e=>{
 	e.preventDefault()
-	location.href="user/signup.html"
+	location.href="user/signin.html"
 })
 $('#lotto_a')
 	.css('cursor','pointer')
@@ -134,7 +134,7 @@ $('#lotto_a')
 })
 $('#login-button').click(e =>{
 	$.ajax({
-		url:'/member/login',
+		url:'/admin/login',
 		type: 'post',
 		data: JSON.stringify({userid:$('#userid').val(),
 		password:$('#password').val()}),
