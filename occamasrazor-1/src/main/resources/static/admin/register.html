@@ -9,6 +9,7 @@ html, body{width: 100%; height:100%;overflow:hidden; min-height: 100%;}
 .border_black{border:1px solid black;}
 .center{margin : 0 auto; text-align: center;}
 .width_full{width:100%; height:80%;}
+.title_size{width:200px}
 </style>
 </head>
 <body>
@@ -40,59 +41,70 @@ html, body{width: 100%; height:100%;overflow:hidden; min-height: 100%;}
 			
 			<tr>
 				<td id="center" colspan ="4">
-					<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg">
+					<table id="table2">
+	<tr>
+		<td>사진 첨부</td>
+		<td colspan="4">입력정보</td>
+	</tr>
+	<tr>
+		<td id = image_a rowspan="4">
+		<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=
+				http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F24524B445932AFEA0CC895">
+		</td>
+		<td id = name_a>이름</td>
+		<td colspan="3">
+			<input id="name" type="text">
+		</td>
+	</tr>
+	<tr>
+		<td id = position_a>직급</td>
+		<td colspan="3">
+			<input id="position" type="text">
+		</td>
+	</tr>
+	<tr>
+		<td id = phone_a>전화번호</td>
+		<td colspan="3">
+			<input id="phone" type="text">
+		</td>
+	</tr>
+	<tr>
+		<td id = email_a>이메일</td>
+		<td colspan="3">
+			<input id="email" type="text">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input id="put_button" type ="button" value="첨부">
+		</td>
+		<td colspan = "4">
+			<input id="register_button" type ="button" value="등록">
+			<input id="cancel_button" type ="button" value="취소">
+		</td>
+</table>
 				</td>
 			</tr>
 	
-			<tr>
+			<tr>	
 				<td id="endsecond_a" colspan ="4"></td>
 			</tr>
-			
-			<tr>
-				<td>
-					<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_05.jpg">
-				</td>
-				<td>
-					<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_12.png">
-				</td>
-				<td>
-					<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_10.jpg">
-				</td>
-				<td>
-					<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_08.jpg">
-				</td>
-			</tr>
-			<tr id="final">
-				<td>
-					<label>미세먼지 건강수칙</label>
-				</td>
-				<td>
-					<label>법정 감염병 분류체계 개편</label>
-				</td>
-				<td>
-					<label>인플루엔자</label>
-				</td>
-				<td>
-					<label>엑상형 전자담배 관련 폐손상</label>
-				</td>
-			</tr>
-			
 </table>
 
 <script>
-$('#talbe').css({width:'80%', height:'80%'}).addClass('border_black center')
+$('#talbe').css({width:'1000px', height:'800px'}).addClass('border_black center')
 $('#talbe td').addClass('border_black')
 $('#center').addClass('center')
 $('#second_a').css({height: '50px'})
-$('#endsecond_a').css({height: '30px'})
+$('#endsecond_a').css({height: '50px'})
 $('#final').css({height: '50px'}).addClass('center')
-
-$('#register_button').click(e=>{
-	e.preventDefault
-	location.href = "admin/register.html"
-})
-
-
+$('#table2').css({width:'80%', height:'80%'}).addClass('border_black center')
+$('#table2 td').addClass('border_black')
+$('#image_a').css({width:'450px',height:'150px'})
+$('#name_a').addClass('title_size')
+$('#position_a').addClass('title_size')
+$('#phone_a').addClass('title_size')
+$('#email_a').addClass('title_size')
 </script>
 </body>
 </html>
