@@ -6,102 +6,41 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
+import com.occamasrazor.web.util.Data;
 import javax.swing.JOptionPane;
 
-import java.util.Set;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.occamasrazor.web.util.Messenger;
 
 @Service
 public class UserServiceImpl implements UserService{
-	public final static String FILE_PATH = "C:\\Users\\bit2\\spring-workspace\\occamasrazor\\src\\main\\resources\\static\\user\\";
-	
+	@Autowired UserDao userDao;
 	@Override
-	public User detail(String userid) {
-		return null;
-	}
-	@Override
-	public boolean update(User user) {
-		return false;
-	}
-	@Override
-	public boolean remove(String userid) {
-		return true;
+	public void join(User user) {
+		userDao.insert(user);
 	}
 
-@Override
-public void saveFile(User user) {
-	try {
-		File file = new File(FILE_PATH+"list.txt");
-		@SuppressWarnings("resource")
-		BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
-				String message = user.toString();
-				System.out.println(message);
-				writer.write(message);
-				writer.newLine();
-				writer.flush();
-	}catch(Exception e) {
-		
-	}
-}
 	@Override
-	public List<User> readFile() {
-	List<User> userlist = new ArrayList<>();
-	List<String> list = new ArrayList<>();
-		try {
-		File file = new File(FILE_PATH+"list.txt");
-		BufferedReader reader = new BufferedReader(new FileReader(file));
-		String message = "";
-		while((message = reader.readLine())!= null) {
-			list.add(message);
-		}
-		JOptionPane.showMessageDialog(null, list);
-		reader.close();
-		} catch(Exception e) {
-		
-		}
-		User u =null;
-	for(int i =0;i<list.size();i++) {
-		u = new User();
-		String[] arr = list.get(i).split(",");
-		u.setUserid(arr[0]);
-		u.setPassword(arr[1]);
-		u.setName(arr[2]);
-		u.setSsn(arr[3]);
-		u.setAddr(arr[4]);
-		userlist.add(u);
-		
+	public List<User> list() {
+		return userDao.selectAll();
 	}
-	return userlist;
-	}
+
 	@Override
-	public Messenger confirm(String userid) {
-	Messenger confirm = null;
-	for(int i=0;i<readFile().size();i++) {
-		if(readFile().get(i).getUserid().equals(userid)) {
-			confirm = Messenger.FAIL;
-			break;
-		}else {
-			confirm = Messenger.SUCCESS;
-		}	
+	public User detail(String userid) {
+		return userDao.selectOne(userid);
 	}
-	return confirm;
-}
+
 	@Override
-	public int count() {
-		return 0;
+	public void update(User user) {
+		userDao.update(user);
 	}
+
 	@Override
-	public User login(User user) {
-		return null;
+	public void delete(User user) {
+		userDao.delete(user);
 	}
 
 }
