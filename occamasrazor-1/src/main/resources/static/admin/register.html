@@ -119,12 +119,24 @@ $('#admin_register_button').click(e=>{
 		dataType:'json',
 		contentType:'application/json',
 		success: d=>{
-			location.href = 'access.html'
+			location.href = '../index.html'
 		},
 		error : r =>{
 			r.status
 		}
 	})
+})
+$('#access_button').click(e=>{
+	e.preventDefault
+	location.href = "access.html"
+})
+$('#login_button').click(e=>{
+	e.preventDefault
+	location.href = "../user/signin.html"
+})
+$('#join_button').click(e=>{
+	e.preventDefault
+	location.href = "../user/signup.html"
 })
 
 /* $('#register_button').css({color:'blue',cursor:'none','text-'}) */

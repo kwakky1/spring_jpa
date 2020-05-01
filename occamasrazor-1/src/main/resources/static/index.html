@@ -91,6 +91,15 @@ $('#register_button').click(e=>{
 	e.preventDefault
 	location.href = "admin/register.html"
 })
+$('#access_button').click(e=>{
+	e.preventDefault
+	$.ajax({
+		usl:'',
+		type:'',
+		
+	})
+	location.href = "admin/access.html"
+})
 $('#login_button').click(e=>{
 	e.preventDefault
 	location.href = "user/signin.html"
