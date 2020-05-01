@@ -1,14 +1,16 @@
-"user strict"
+"use strict"
 var admin = admin || {}
-admin = (()=>{
-	let init = () =>{
-		alert('1')
+admin =(()=>{
+	let init = () => {
+		onCrate()
 	}
-	let onCreate ()=>{
-		alert('2')
+	let onCrate = ()=>{
+		setContentView()
 	}
 	let setContentView = ()=>{
-		alert('3')
+		
 	}
 	return {init}
 })()
+
+// iife형식
