@@ -14,3 +14,10 @@ admin =(()=>{
 })()
 
 // iife형식
+
+
+"use strcit"
+var admin = admin || {}
+admin = (()=>{
+	let 
+})()
