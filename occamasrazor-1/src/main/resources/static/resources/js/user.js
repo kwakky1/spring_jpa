@@ -30,42 +30,34 @@ user = (()=>{
 					alert('취소하기')
 				})
 			})
+			
+			$('#access_a').click(e=>{
+			e.preventDefault()
+	      	$('#content').empty()
+	      	$('#content').html(adminVue.login())
+	      	$(`<input type="button">`)
+			.attr({value:"취소"})
+			.appendTo('#login_box')
+			$(`<input type="button">`)
+	      	.attr({value:"로그인"})
+	      	.appendTo('#login_box')
+	      		.click(e=>{
+	      		e.preventDefault()
+	      		location.href = "/admin"
+	      		/*
+				 * $.ajax({ url:'/user/admin', type:'post', data:JSON.stringify({
+				 * 
+				 * }), dataType:'json', contentType:'application/json', success:
+				 * d=>{ }, error: (r,x,e) =>{ alert(r) } })
+				 */
+		      	})
+		
+			})
 		}).fail(()=>{
 			alert(WHEN_ERROR)
 		})
 	
-		$('#access_a').click(e=>{
-    	 e.preventDefault()
-      	$('#content').empty()
-      	$('#content').html(adminVue.login())
-      	$(`<input type="button">`)
-      	.attr({value:"사용자 로그인"})
-      	.appendTo('#login_box')
-      	.click(e=>{
-      		e.preventDefault()
-      		$.ajax({
-      			url:'/user/admin',
-      			type:'post',
-      			data:JSON.stringify({
-      				
-      			}),
-      			dataType:'json',
-      			contentType:'application/json',
-      			success: d=>{
-      				
-      			},
-      			error: (r,x,e) =>{
-      				alert(r)
-      			}
-      		})
-      	})
-      	
-		$(`<input type="button">`)
-		.arrt({value:"취소"})
-		.appendTo('#login_box')
-	
-      	//location.href = "/admin"
-     })
+		
 	}
 	let setContentView = ()=>{
 		$('#kcdc').css({ width: '80%', height: '900px' }).addClass('border_black center')

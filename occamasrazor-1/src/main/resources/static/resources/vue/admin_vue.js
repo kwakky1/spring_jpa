@@ -55,20 +55,19 @@ const adminVue = {
 		</table>
 		`
 		},
-		login:()=>{
+		
+		login :()=>{
 			return 
 			`  
 			<article>
-			<form id="login_box">
-		   	<label>ID </label> <br>
-		   	<input id="userid" type="text"> <br>
-		   	<label>PASSWORD</label><br>
-		   	<input id="password" type="text"><br>
-			</form>
+				<form id="login_box">
+					<label>ID </label> <br>
+			   		<input id="userid" type="text"> <br>
+			   		<label>PASSWORD</label><br>
+		   			<input id="password" type="text"><br>
+				</form>
 			</article>
 			`
-		},
-		onCreate:()=>{},
-		setContentView:()=>{}
+		}
 }
 	
