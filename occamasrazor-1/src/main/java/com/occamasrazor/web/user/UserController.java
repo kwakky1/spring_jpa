@@ -29,6 +29,7 @@ public class UserController {
 	}
 	@GetMapping("/{userid}")
 	public User detail(@PathVariable String userid) {
+		System.out.println("userid : " + userid);
 		return userService.detail(userid);
 	}
 	@PutMapping("/{userid}")

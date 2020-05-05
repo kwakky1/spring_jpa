@@ -5,6 +5,7 @@ user = (()=>{
 	let admin_vue
 	let init = () =>{
 		admin_vue = `/resources/vue/admin_vue.js`
+			con
 		onCreate()
 	}
 	let onCreate = () =>{
@@ -30,14 +31,10 @@ user = (()=>{
 					alert('취소하기')
 				})
 			})
-			
 			$('#access_a').click(e=>{
 			e.preventDefault()
 	      	$('#content').empty()
-	      	$('#content').html(adminVue.login())
-	      	$(`<input type="button">`)
-			.attr({value:"취소"})
-			.appendTo('#login_box')
+	      	$('#content').html(adminVue.login2());
 			$(`<input type="button">`)
 	      	.attr({value:"로그인"})
 	      	.appendTo('#login_box')
@@ -51,15 +48,17 @@ user = (()=>{
 				 * d=>{ }, error: (r,x,e) =>{ alert(r) } })
 				 */
 		      	})
-		
+	      	$(`<input type="button">`)
+			.attr({value:"취소"})
+			.appendTo('#login_box')
 			})
-		}).fail(()=>{
-			alert(WHEN_ERROR)
-		})
-	
+			}).fail(()=>{
+				alert(WHEN_ERROR)
+			})
 		
-	}
-	let setContentView = ()=>{
+			
+			}
+		let setContentView = ()=>{
 		$('#kcdc').css({ width: '80%', height: '900px' }).addClass('border_black center')
 		$('#tr_1').css({ width: '80%', height: '50px' }).addClass('border_black center')
 		$('#menu').css({ width: '80%', height: '50px' }).addClass('border_black center')
