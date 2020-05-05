@@ -61,9 +61,9 @@ const adminVue = {
 			<article>
 			<form id="login_box">
 				<label>ID </label> <br>
-		   		<input id="userid" type="text"> <br>
+		   		<input id="employNumber_admin" type="text"> <br>
 		   		<label>PASSWORD</label><br>
-	   			<input id="password" type="text"><br>
+	   			<input id="password_admin" type="text"><br>
 			</form>
 		</article>
 		`

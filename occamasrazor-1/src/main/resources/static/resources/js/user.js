@@ -39,14 +39,28 @@ user = (()=>{
 	      	.appendTo('#login_box')
 	      		.click(e=>{
 	      		e.preventDefault()
-	      		location.href = "/admin"
-	      		/*
-				 * $.ajax({ url:'/user/admin', type:'post', data:JSON.stringify({
-				 * 
-				 * }), dataType:'json', contentType:'application/json', success:
-				 * d=>{ }, error: (r,x,e) =>{ alert(r) } })
-				 */
-		      	})
+				  $.ajax({ url:'/admins/login',
+					  type:'post',
+					  data:JSON.stringify({
+						  employNumber : $('#employNumber_admin').val(),
+						  password : $('#password_admin').val()
+					  }),
+					  dataType:'json',
+					  contentType:'application/json',
+					  success: d=>{ 
+						  if(d === 'SUCCESS'){
+							  alert('로그인 성공')
+							  location.href = "/admin"
+						  } else{
+							  alert('ID와 비밀번호를 확인해주세요.')
+							  location.href = "/home"
+						  }
+					  },
+					  error: (r,x,e) =>{
+						  alert(r) 
+					  } 
+				  })
+	      		})
 	      	$(`<input type="button">`)
 			.attr({value:"취소"})
 			.appendTo('#login_box')

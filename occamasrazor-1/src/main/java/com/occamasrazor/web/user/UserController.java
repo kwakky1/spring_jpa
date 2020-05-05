@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.occamasrazor.web.admin.AdminService;
 import com.occamasrazor.web.util.Messenger;
 
 @RestController

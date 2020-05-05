@@ -40,4 +40,9 @@ public class AdminController {
 		adminService.remove(admin);
 		return Messenger.SUCCESS;
 	}
+	@PostMapping("/login")
+	public Messenger login(@RequestBody Admin admin) {
+		return adminService.login(admin);
+		
+	}
 }

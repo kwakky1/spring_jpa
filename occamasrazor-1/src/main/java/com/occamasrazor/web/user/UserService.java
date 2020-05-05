@@ -15,4 +15,5 @@ public interface UserService {
 	public void update(User user);
 
 	public void delete(User user);
+
 }

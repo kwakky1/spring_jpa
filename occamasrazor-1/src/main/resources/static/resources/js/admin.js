@@ -4,7 +4,6 @@ admin =(()=>{
 	let admin_vue;
 	let init = () => {
 		admin_vue = `/resources/vue/admin_vue.js`
-			console.log(admin_vue);
 		onCrate()
 	}
 	let onCrate = ()=>{
