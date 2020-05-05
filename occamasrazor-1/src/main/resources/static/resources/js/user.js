@@ -5,7 +5,6 @@ user = (()=>{
 	let admin_vue
 	let init = () =>{
 		admin_vue = `/resources/vue/admin_vue.js`
-			con
 		onCreate()
 	}
 	let onCreate = () =>{
