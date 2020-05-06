@@ -69,8 +69,7 @@ const adminVue = {
 		`
 		},
 		detail: ()=>{
-			return 
-			`
+			return `
 			<table id="table2">
 				<tr>
 					<td>사진 첨부</td>
@@ -113,8 +112,10 @@ const adminVue = {
 			</table>
 			`
 		},
-		test: ()=>{
-			return  "<table id='table2'><tr><td>사진 첨부</td><td colspan='4'>입력정보</td></tr><tr><td id = image_a rowspan='4'><img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F24524B445932AFEA0CC895'></td><td id = name_a>이름</td><td colspan='3'><input id='name' type='text'></td></tr><tr><td id = userid_a>아이디</td><td colspan='3'><input id='userid' type='text'></td></tr><tr><td id = phoneNumber_a>전화번호</td><td colspan='3'><input id='phoneNumber' type='text'></td></tr><tr><td id = email_a>이메일</td><td colspan='3'><input id='email' type='text'></td></tr><tr><td><input id='put_button' type ='button' value='첨부'></td><td colspan = '4'><input id='admin_register_button' type ='button' value='등록'><input id='admin_cancel_button' type ='button' value='취소'></td></table>";
-				}
+		table:()=>{
+			return`
+			
+			`
+		}
 }
 	
