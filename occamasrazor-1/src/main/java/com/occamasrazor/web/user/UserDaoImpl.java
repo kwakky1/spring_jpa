@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 		List<User> userlist = new ArrayList<>();
 		List<String> list = new ArrayList<>();
 		try {
-			File file = new File("C:\\Users\\bit2\\git\\spring_jpa1\\occamasrazor-1\\src\\main\\resources\\static\\resources\\file\\userlist.csv");
+			File file = new File("C:\\Users\\Administrator\\git\\spring_jpa\\occamasrazor-1\\src\\main\\resources\\static\\resources\\file\\userlist.csv");
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String message = "";
 			while((message = reader.readLine()) != null) {

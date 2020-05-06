@@ -1,6 +1,6 @@
 "use strict"
-const adminVue = {
-		join:()=>{
+var adminVue = {
+		join: ()=>{
 			return `<table id="talbe">
 					<tr>
 					<td id="center" colspan ="4">
@@ -55,8 +55,7 @@ const adminVue = {
 		</table>
 		`
 		},
-		
-		login2:()=>{
+		login2: ()=>{
 			return `
 			<article>
 			<form id="login_box">
@@ -70,38 +69,48 @@ const adminVue = {
 		},
 		detail: ()=>{
 			return `
-			<table id="table2">
 				<tr>
 					<td>사진 첨부</td>
 					<td colspan="4">입력정보</td>
 				</tr>
 				<tr>
-					<td id = image_a rowspan="4">
+					<td rowspan="6">
 					</td>
-					<td id = name_a>이름</td>
+					<td>사번</td>
+					<td colspan="3">
+						<input id="employNumber_text" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td>이름</td>
 					<td colspan="3">
 						<input id="name_text" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td id = userid_a>아이디</td>
+					<td>직급</td>
 					<td colspan="3">
-						<input id="userid_text" type="text">
+						<input id="position_text" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td id = phoneNumber_a>전화번호</td>
+					<td>연락처</td>
 					<td colspan="3">
 						<input id="phoneNumber_text" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td id = email_a>이메일</td>
+					<td>이메일</td>
 					<td colspan="3">
 						<input id="email_text" type="text">
 					</td>
 				</tr>
 				<tr>
+					<td>입사일</td>
+					<td colspan="3">
+						<input id="registerDate_text" type="text">
+					</td>
+				</tr>
 					<td>
 						<input id="put_button" type ="button" value="첨부">
 					</td>
@@ -109,12 +118,6 @@ const adminVue = {
 						<input id="admin_register_button" type ="button" value="등록">
 						<input id="admin_cancel_button" type ="button" value="취소">
 					</td>
-			</table>
-			`
-		},
-		table:()=>{
-			return`
-			
 			`
 		}
 }

@@ -1,28 +1,27 @@
 "use strict"
-const lostVue = {
+var lostVue = {
 		table: ()=>{
-			return `<table id="userData">
+			return `
                         <tr>
                             <td>
-                                <a id="number">No.</a>
+                                <span>No.</span>
                             </td>
                             <td>
-                                <a id="lostid">분실물ID</a>
+                                <span>분실물ID</span>
                             </td>
                              <td>
-                                <a id="lostname">물품명</a>
+                                <span>물품명</span>
                             </td>
                            <td>
-                                <a id="lostdate">습득일자</a>
+                                <span>습득일자</span>
                             </td>
                             <td>
-                                <a id="lostdivision">분류</a>
+                                <span>분류</span>
                             </td>
                             <td>
-                                <a id="lostlocal">습득위치</a>
+                                <span>습득위치</span>
                             </td>
                         </tr>
-                    </table>
 			
 			`
 		},
